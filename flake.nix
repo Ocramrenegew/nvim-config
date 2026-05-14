@@ -12,7 +12,7 @@
     in {
         packages.${system}.default = pkgs.neovim;
 
-        homeManagerModules.default = { pkgs, ... }: {
+        homeManagerModules.default = { ... }: {
             home.packages = [ pkgs.neovim ];
             home.file.".config/nvim".source = ./.;
         };

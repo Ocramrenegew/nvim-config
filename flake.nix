@@ -14,7 +14,8 @@
 
         homeManagerModules.default = { ... }: {
             home.packages = [ pkgs.neovim ];
-            home.file.".config/nvim".source = ./.;
+            home.file.".config/nvim".source =
+                config.lib.file.mkOutOfStoreSymlink /home/marcow/nvim-config;
         };
     };
 }

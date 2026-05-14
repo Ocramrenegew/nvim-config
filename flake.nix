@@ -12,7 +12,7 @@
     in {
         packages.${system}.default = pkgs.neovim;
 
-        homeManagerModules.default = { ... }: {
+        homeManagerModules.default = { config, ... }: {
             home.packages = [ pkgs.neovim ];
             home.file.".config/nvim".source =
                 config.lib.file.mkOutOfStoreSymlink /home/marcow/nvim-config;
